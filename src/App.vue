@@ -12,7 +12,9 @@ import ex3 from './components/ex3.vue'
 import emits from './components/emits.vue'
 import cardslotex from './components/cardslotex.vue'
 import recusrsiveComments from './components/recusrsiveComments.vue'
+import recusrsiveComments2 from './components/recusrsiveComments2.vue'
 import jsonComments from './components/comments1.json'
+import ex4_modal from './components/ex4_modal.vue'
 
 const data=reactive([
 {name:'test',age:25,email:'test@gmail.com'},
@@ -70,7 +72,7 @@ const childMsg = ref('No child msg yet')
   <!-- <card><h3>Slot is added</h3></card>  
   <card><button>click me</button></card>   -->
 
-  <ul v-for="(commentItem, index) in jsonComments" :key="index" class="comments">
+  <!-- <ul v-for="(commentItem, index) in jsonComments" :key="index" class="comments">
     <recusrsiveComments
       v-bind="{
         author: commentItem.author,
@@ -78,7 +80,14 @@ const childMsg = ref('No child msg yet')
         comments: commentItem.comments
       }"
     />
-  </ul>
+  </ul> -->
+<!-- 
+  <ul class="comments">
+  <recusrsiveComments2 v-bind="{comments:jsonComments}" />
+  </ul> -->
+
+  <ex4_modal></ex4_modal>
+  
   </main>
 </template>
 

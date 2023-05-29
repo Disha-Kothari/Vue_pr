@@ -21,11 +21,11 @@ let url2=("")
 
 watchEffect(()=>{
     url=`${API_URL}?per_page=${page.value}&name=${name.value}&action=${action.value}`
-},{immediate:true})
+})
 
 watchEffect(()=>{
 url2=`${API_URL}?per_page=${obj.page}&name=${obj.name}&action=${obj.done}`
-},{immediate:true})
+})
 
 
 
